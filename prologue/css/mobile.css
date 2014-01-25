@@ -46,7 +46,7 @@ html,body{
 	color:#000;
 	position: relative;
 	margin-bottom: 5px;
-	padding: 5px 0;
+	
 }
 .main ul li a{
 	width: 100%;
@@ -54,7 +54,7 @@ html,body{
 	color:#000;
 	text-decoration: none;
 	position: relative;
-	left: 45%;
+	margin: 0 auto;
 }
 h1,h2,h3,h4,h5,h6{
 	font-weight: 200;
@@ -64,6 +64,9 @@ h1,h2,h3,h4,h5,h6{
 }
 .main img.icons {
 	float: left;
+	width: 45px;
+	height: 45px;
+
 }
 .main img.next{
 	width: 25px;
@@ -75,5 +78,7 @@ h1,h2,h3,h4,h5,h6{
 	margin-top:-50px;
 }
 p{
+	position: relative;
+	left: 40%;
 	font-size: 1.6em;
 }
