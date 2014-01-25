@@ -1,13 +1,15 @@
 <?php
 
 class Recurrent_Controller extends Base_Controller {
+
+	public $app_user = 1;
 	
     public function index() {
 		if($this->hasList()) {
 				$sql = $this->db->prepare("
-					SELECT *
-					FROM reccurent_lists
-					WHERE user_id = '".$this->app_user."'
+					SELECT r.*, (SELECT COUNT(*) FROM reccurent_products WHERE reccurent_list_id = r.id) AS produse
+					FROM reccurent_lists AS r
+					WHERE r.user_id = '".$this->app_user."'
 					");
 				$sql->execute();
 				$lists = $sql->fetchAll(PDO::FETCH_ASSOC);	
@@ -44,9 +46,27 @@ class Recurrent_Controller extends Base_Controller {
 	//create list
 	public function createList()
 	{	
-		if(isset($_POST)){
-			var_dump($_POST);
+		//user post
+		if($_POST) {
+			//receive data
+			$list = new Recurrent_Model();
+			$list->setName($_POST['name']);
+			$list->setDescription($_POST['description']);
+			$list->setUserId(1);
+			$list->setStatus(0);
+			$list->setShoppingInterval($_POST['days']);
+			$list->setLastShoppingDate(date('Y-m-d', time()));
+			$list->setNextShoppingDate(date('Y-m-d', time() + $_POST['days'] * 24 * 60 * 60));
+			$list->setCreatedAt(date('Y-m-d H:i:s', time()));
+
+			$list->save();
+			header('Location: ' . Config::baseDir . 'Recurrent/listProducts/');
 		}
 	}	
+	
+	public function listProducts()
+	{
+		
+	}
 	
 }
