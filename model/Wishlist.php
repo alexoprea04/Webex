@@ -16,7 +16,8 @@ class Wishlist_Model extends Base_Model {
         $sql = 'SELECT *
                     FROM ' . self::TABLE . '
                     WHERE ' . $cond . '
-                        AND status > 0';
+                        AND status > 0
+                    LIMIT 1';
         $query = $this->db->prepare($sql);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -60,12 +61,14 @@ class Wishlist_Model extends Base_Model {
                     `status`,
                     `created_at`
                     ) VALUES (
-                        " . $this->getUserId() . ",
+                        '" . $this->getUserId() . "',
                         '" . $this->getName() . "',
                         '" . $this->getDescription() . "',
-                        " . $this->getStatus() . ",
+                        '" . $this->getStatus() . "',
                         NOW()
                     )";
+        echo $sql;
+        die;
         $query = $this->db->prepare($sql);
         $query->execute();
         return $query->fetchAll(PDO::FETCH_ASSOC);

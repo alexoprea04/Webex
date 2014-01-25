@@ -30,12 +30,17 @@ class Base_Controller {
     private function loadView() {
         preg_match('/([a-zA-Z]+)_Controller/s', $this->className, $matches);
         $data = $this->viewVars;
+        $baseDir = Config::baseDir;
+
+        $filename =  'view/' .
+            strtolower($matches[1])
+            . DIRECTORY_SEPARATOR .
+            strtolower($this->methodName) . '.php';
+
         //load file
-        require_once(
-                'view/' .
-                strtolower($matches[1])
-                . DIRECTORY_SEPARATOR .
-                strtolower($this->methodName) . '.php');
+        if (is_file($filename)) {
+            require_once($filename);
+        }
     }
 
     public function preMethodCall() {
@@ -43,7 +48,17 @@ class Base_Controller {
     }
 
     public function postMethodCall() {
+        $this->loadHeader();
         $this->loadView();
+        $this->loadFooter();
+    }
+
+    public function loadHeader() {
+        require_once(dirname(__DIR__) . '../view/header.php');
+    }
+
+    public function loadFooter() {
+        require_once(dirname(__DIR__) . '../view/footer.php');
     }
 
 

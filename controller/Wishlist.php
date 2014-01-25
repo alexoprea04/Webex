@@ -2,12 +2,24 @@
 
 class Wishlist_Controller extends Base_Controller {
 
-    public function addForm() {
-
+    public function addItem() {
+        //do nothing ?
     }
 
-    public function saveForm() {
+    public function saveItem() {
+        //receive data
+        $name = $_POST['name'];
+        $description = $_POST['description'];
 
+        $list = new Wishlist_Model();
+        $list->setName($name);
+        $list->setDescription($description);
+        $list->setUserId(1);
+
+        $list->save();
+die;
+        //redirect to listItems
+        header('Location: ' . Config::baseDir . 'Wishlist/listProducts/');
     }
 
     public function listItems() {
@@ -18,7 +30,10 @@ class Wishlist_Controller extends Base_Controller {
     }
 
     public function listProducts() {
+        $products = new Products_Model();
+        $results = $products->fetchAll();
 
+        $this->addVar('products', $results);
     }
 
 }
