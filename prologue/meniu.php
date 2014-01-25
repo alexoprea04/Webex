@@ -21,10 +21,20 @@
 	</div>
 	<div class="main">
 	<ul>
-		<li><a href="#"><img src="images/avatar.jpg" alt="alerta" class="icons"><p>Alerta produs</p></a><img src="images/next.png" alt="next"class="next"></li>
-		<li><a href="#"><p>Cumparaturi recurente</p></a><img src="images/next.png" alt="next" class="next"></li>
-		<li><a href="#"><p>Produsul zilei</p></a><img src="images/next.png" alt="next" class="next"></li>
-		<li><a href="#"><p>Setari</p></a><img src="images/next.png" alt="next" class="next"></li>
+		<li>
+			<a href="#"><img src="images/avatar.jpg" alt="alerta" class="icons"><p>Alerta produs</p></a>
+			<img src="images/next.png" alt="next"class="next">
+		</li>
+		<li><a href="#"><img src="images/recurent_shopping.jpg" alt="recurent" class="icons"><p>Cumparaturi recurente</p></a>
+			<img src="images/next.png" alt="next" class="next">
+		</li>
+		<li><a href="#"><img src="images/product_day.png" alt="alerta" class="icons"><p>Produsul zilei</p></a>
+			<img src="images/next.png" alt="next" class="next">
+		</li>
+		<li><a href="#">
+			<img src="images/setup.png" alt="alerta" class="icons"><p>Setari</p></a>
+			<img src="images/next.png" alt="next" class="next">
+		</li>
 	</ul>
 	</div>
 </body>
