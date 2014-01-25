@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/?$ index.php?%{QUERY_STRING}&class=$1&method=$2 [QSA,L]

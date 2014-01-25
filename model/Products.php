@@ -1,4 +1,4 @@
 <?php
-    class Products_Model {
+class Products_Model {
 
-    }
+}

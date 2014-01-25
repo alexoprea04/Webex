@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" name="Default" comment="" />
+    <list default="true" id="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\cosmin.milea\Documents\GitHub\Webex\controllers\main.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Products.php" afterPath="$PROJECT_DIR$/model/Products.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Webex.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390656026891" ignored="false" />
+    <file path="/Dummy.txt" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390663187140" ignored="false" />
     <file path="/parser.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390657505752" ignored="false" />
     <file path="/autoloader.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390659653547" ignored="false" />
-    <file path="/index.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390659240459" ignored="false" />
+    <file path="/index.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390664800949" ignored="false" />
     <file path="/Model_Products.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390658020418" ignored="false" />
     <file path="/Products.model.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390659608903" ignored="false" />
+    <file path="/Base_Controller.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390661083525" ignored="false" />
+    <file path="/main.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390661146625" ignored="false" />
+    <file path="/Test.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390664142044" ignored="false" />
+    <file path="/Base.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390664622853" ignored="false" />
+    <file path="/.htaccess" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390663972688" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +42,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="-0.0">
+            <state line="14" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="-9.153846">
               <folding />
             </state>
           </provider>
@@ -41,25 +51,52 @@
       <file leaf-file-name="Products.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Products.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="5" selection-start="39" selection-end="39" vertical-scroll-proportion="-1.9615384">
+            <state line="3" column="1" selection-start="31" selection-end="31" vertical-scroll-proportion="-1.9615384">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parser.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Test.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/Test.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="25" selection-start="112" selection-end="112" vertical-scroll-proportion="0.1824687">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Base.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/Base.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="66" selection-start="504" selection-end="504" vertical-scroll-proportion="-11.115385">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/test/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="98" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parser.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.030411448">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
@@ -68,7 +105,7 @@
       <file leaf-file-name="autoloader.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/autoloader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="5" selection-start="307" selection-end="307" vertical-scroll-proportion="-5.8846154">
+            <state line="6" column="35" selection-start="222" selection-end="222" vertical-scroll-proportion="-3.9230769">
               <folding />
             </state>
           </provider>
@@ -95,9 +132,17 @@
         <option value="$PROJECT_DIR$/model/Model_Products.php" />
         <option value="$PROJECT_DIR$/model/Products.model.php" />
         <option value="$PROJECT_DIR$/include/autoloader.php" />
-        <option value="$PROJECT_DIR$/model/Products.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/parser.php" />
+        <option value="$PROJECT_DIR$/controllers/Base_Controller.php" />
+        <option value="$PROJECT_DIR$/controllers/main.php" />
+        <option value="$PROJECT_DIR$/model/Products.php" />
+        <option value="$PROJECT_DIR$/controllers/Base.php" />
+        <option value="$PROJECT_DIR$/controllers/Test.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/controller/Base.php" />
+        <option value="$PROJECT_DIR$/view/test/index.php" />
+        <option value="$PROJECT_DIR$/controller/Test.php" />
       </list>
     </option>
   </component>
@@ -163,6 +208,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Webex" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Webex" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -191,7 +254,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -305,37 +368,58 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controllers/main.php">
+    <entry file="file://$PROJECT_DIR$/parser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/autoloader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="5" selection-start="307" selection-end="307" vertical-scroll-proportion="-5.8846154">
+        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="-0.65384614">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/Products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="5" selection-start="39" selection-end="39" vertical-scroll-proportion="-1.9615384">
+        <state line="3" column="1" selection-start="31" selection-end="31" vertical-scroll-proportion="-1.9615384">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="98" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/autoloader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="35" selection-start="222" selection-end="222" vertical-scroll-proportion="-3.9230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/Base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="66" selection-start="504" selection-end="504" vertical-scroll-proportion="-11.115385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/test/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
+        <state line="14" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="-9.153846">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parser.php">
+    <entry file="file://$PROJECT_DIR$/controller/Test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.030411448">
+        <state line="6" column="25" selection-start="112" selection-end="112" vertical-scroll-proportion="0.1824687">
           <folding />
         </state>
       </provider>
