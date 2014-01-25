@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\cosmin.milea\Documents\GitHub\Webex\controllers\main.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Products.php" afterPath="$PROJECT_DIR$/model/Products.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/Base.php" afterPath="$PROJECT_DIR$/controller/Base.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/Test.php" afterPath="$PROJECT_DIR$/controller/Test.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Webex.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390663187140" ignored="false" />
+    <file path="/Dummy.txt" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390665564058" ignored="false" />
     <file path="/parser.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390657505752" ignored="false" />
     <file path="/autoloader.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390659653547" ignored="false" />
     <file path="/index.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390664800949" ignored="false" />
@@ -17,9 +17,10 @@
     <file path="/Products.model.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390659608903" ignored="false" />
     <file path="/Base_Controller.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390661083525" ignored="false" />
     <file path="/main.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390661146625" ignored="false" />
-    <file path="/Test.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390664142044" ignored="false" />
-    <file path="/Base.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390664622853" ignored="false" />
+    <file path="/Test.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390665872706" ignored="false" />
+    <file path="/Base.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390665768106" ignored="false" />
     <file path="/.htaccess" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390663972688" ignored="false" />
+    <file path="/dbConnection.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390665708875" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +43,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="-9.153846">
+            <state line="5" column="39" selection-start="104" selection-end="104" vertical-scroll-proportion="-3.2692308">
               <folding />
             </state>
           </provider>
@@ -60,7 +61,7 @@
       <file leaf-file-name="Test.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/Test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="25" selection-start="112" selection-end="112" vertical-scroll-proportion="0.1824687">
+            <state line="11" column="8" selection-start="279" selection-end="279" vertical-scroll-proportion="0.33452594">
               <folding />
             </state>
           </provider>
@@ -69,7 +70,7 @@
       <file leaf-file-name="Base.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/Base.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="66" selection-start="504" selection-end="504" vertical-scroll-proportion="-11.115385">
+            <state line="12" column="104" selection-start="314" selection-end="314" vertical-scroll-proportion="-7.8461537">
               <folding />
             </state>
           </provider>
@@ -97,6 +98,15 @@
         <entry file="file://$PROJECT_DIR$/parser.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="-0.65384614">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Random.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Random.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="0" selection-start="545" selection-end="631" vertical-scroll-proportion="-13.076923">
               <folding />
             </state>
           </provider>
@@ -139,9 +149,10 @@
         <option value="$PROJECT_DIR$/controllers/Base.php" />
         <option value="$PROJECT_DIR$/controllers/Test.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/controller/Base.php" />
         <option value="$PROJECT_DIR$/view/test/index.php" />
+        <option value="$PROJECT_DIR$/include/dbConnection.php" />
+        <option value="$PROJECT_DIR$/controller/Base.php" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/controller/Test.php" />
       </list>
     </option>
@@ -292,12 +303,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.67064846" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -368,13 +379,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/parser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="-0.65384614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/Products.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="1" selection-start="31" selection-end="31" vertical-scroll-proportion="-1.9615384">
@@ -396,9 +400,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/parser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controller/Base.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="66" selection-start="504" selection-end="504" vertical-scroll-proportion="-11.115385">
+        <state line="12" column="104" selection-start="314" selection-end="314" vertical-scroll-proportion="-7.8461537">
           <folding />
         </state>
       </provider>
@@ -412,14 +423,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="-9.153846">
+        <state line="5" column="39" selection-start="104" selection-end="104" vertical-scroll-proportion="-3.2692308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Random.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="545" selection-end="631" vertical-scroll-proportion="-13.076923">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/Test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="25" selection-start="112" selection-end="112" vertical-scroll-proportion="0.1824687">
+        <state line="11" column="8" selection-start="279" selection-end="279" vertical-scroll-proportion="0.33452594">
           <folding />
         </state>
       </provider>
