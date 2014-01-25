@@ -19,5 +19,11 @@
 
 		</div>
 	</div>
+    <div class="main">
+        <ul>
+            <li><a href="#"><p>Product name:</p></a><img src="prologue/images/next.png" alt="next"></li>
+            <li><a href="#"><p>Description:</p></a><img src="prologue/images/next.png" alt="next"></li>
+        </ul>
+    </div>
 </body>
 </html>
