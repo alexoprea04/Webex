@@ -66,8 +66,10 @@ h1,h2,h3,h4,h5,h6{
 	width: 25px;
 	height: 25px;
 	float: right;
+	margin:0;
 	position: relative;
-	
+	right: 50px;
+	margin-top:-50px;
 }
 p{
 	font-size: 1.6em;
