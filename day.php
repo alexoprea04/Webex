@@ -21,8 +21,14 @@
 	</div>
     <div class="main">
         <ul>
-            <li><a href="#"><p>Product name:</p></a><img src="prologue/images/next.png" alt="next"></li>
-            <li><a href="#"><p>Description:</p></a><img src="prologue/images/next.png" alt="next"></li>
+            <li>
+                <a href="#"><img src="prologue/images/avatar.jpg" alt="alerta" class="icons"><p>Product title</p></a>
+                <img src="prologue/images/next.png" alt="next"class="next">
+            </li>
+            <li>
+                <a href="#"><img src="prologue/images/product_day.png" alt="alerta" class="icons"><p>Description</p></a>
+                <img src="prologue/images/next.png" alt="next"class="next">
+            </li>
         </ul>
     </div>
 </body>
