@@ -62,7 +62,10 @@ h1,h2,h3,h4,h5,h6{
 	display: block;
 	margin: 0;
 }
-.main img{
+.main img.icons {
+	float: left;
+}
+.main img.next{
 	width: 25px;
 	height: 25px;
 	float: right;
