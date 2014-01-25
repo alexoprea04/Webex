@@ -1,7 +1,7 @@
 <?php
 class Products_Model extends Base_Model {
 
-    const TABLE = 'categories';
+    const TABLE = 'products';
 
     private $id;
     private $categoryId;
@@ -16,53 +16,56 @@ class Products_Model extends Base_Model {
     private $modifiedAt;
 
     private function arrayToClassObject(array $array) {
-        $this->setId($array['id']);
-        $this->setCategoryId($array['category_id']);
-        $this->setName($array['name']);
-        $this->setModel($array['model']);
-        $this->setDescription($array['description']);
-        $this->setPrice($array['price']);
-        $this->setImage($array['image']);
-        $this->setCurrency($array['currency']);
-        $this->setStatus($array['status']);
-        $this->setCreatedAt($array['created_at']);
-        $this->setModifiedAt($array['modified_at']);
+        $obj = new self();
+        $obj->setId($array['id']);
+        $obj->setCategoryId($array['category_id']);
+        $obj->setName($array['name']);
+        $obj->setModel($array['model']);
+        $obj->setDescription($array['description']);
+        $obj->setPrice($array['price']);
+        $obj->setImage($array['image']);
+        $obj->setCurrency($array['currency']);
+        $obj->setStatus($array['status']);
+        $obj->setCreatedAt($array['created_at']);
+        $obj->setModifiedAt($array['modified_at']);
 
-        return $this;
+        return $obj;
     }
 
-    private function fetchBy($cond) {
+    private static function fetchBy($cond) {
+        $conn = DBConnection::getConnection();
         $sql = 'SELECT *
                     FROM ' . self::TABLE . '
                     WHERE ' . $cond . '
                         AND status > 0
                     LIMIT 1';
-        $query = $this->db->prepare($sql);
+        $query = $conn->prepare($sql);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
-        return $this->arrayToClassObject($result[0]);
+        return self::arrayToClassObject($result[0]);
     }
 
-    public function fetchById($id) {
-        return $this->fetchBy(' id = ' . (int)$id);
+    public static function fetchById($id) {
+        return self::fetchBy(' id = ' . (int)$id);
     }
 
-    public function fetchByCategoryId($categoryId) {
-        return $this->fetchBy(' category_id = ' . (int)$categoryId);
+    public static function fetchByCategoryId($categoryId) {
+        return self::fetchBy(' category_id = ' . (int)$categoryId);
     }
 
 
-    public function fetchAll() {
+    public static function fetchAll() {
+        $conn = DBConnection::getConnection();
         $sql = 'SELECT *
                     FROM ' . self::TABLE . '
                     WHERE  status > 0';
-        $query = $this->db->prepare($sql);
+        $query = $conn->prepare($sql);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($result AS $row) {
-            $objects[] = $this->arrayToClassObject($result[0]);
+            $objects[] = self::arrayToClassObject($row);
         }
 
         return $objects;

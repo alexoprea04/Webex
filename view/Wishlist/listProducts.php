@@ -1,3 +1,5 @@
 <?php
-    var_dump($data['products']);
+    foreach ($data['products'] AS $product) {
+        echo $product->getName() . '<br>';
+    }
 ?>
