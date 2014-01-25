@@ -17,7 +17,7 @@ class Wishlist_Controller extends Base_Controller {
         $list->setUserId(1);
 
         $list->save();
-die;
+
         //redirect to listItems
         header('Location: ' . Config::baseDir . 'Wishlist/listProducts/');
     }
