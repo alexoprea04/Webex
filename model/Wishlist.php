@@ -3,6 +3,7 @@
 class Wishlist_Model extends Base_Model {
 
     const TABLE = 'wishlists';
+    const TABLE_PRODUCTS = 'wishlist_products';
 
     private $id;
     private $userId;
@@ -11,6 +12,47 @@ class Wishlist_Model extends Base_Model {
     private $status;
     private $createdAt;
     private $modifiedAt;
+
+    public function fetchProducts() {
+        $conn = DBConnection::getConnection();
+        $sql = 'SELECT *
+                    FROM ' . self::TABLE_PRODUCTS . '
+                    WHERE  status > 0';
+        $query = $conn->prepare($sql);
+        $query->execute();
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($result AS $row) {
+            $objects[] = Products_Model::fetchById($row['product_id']);
+        }
+
+        return $objects;
+    }
+
+
+    public function addProduct($productId, $productPrice) {
+        $conn = DBConnection::getConnection();
+        $sql = 'INSERT INTO ' . self::TABLE_PRODUCTS . ' (
+                        wishlist_id,
+                        product_id,
+                        product_price,
+                        product_target_price,
+                        created_at
+                    )
+                    SELECT
+                            ' . $this->getId() . ',
+                            p.id,
+                            p.price,
+                            ' . $productPrice . ',
+                            NOW()
+                        FROM ' . Products_Model::TABLE . ' AS p
+                        WHERE p.id = ' . $productId . '
+                    ';
+        $query = $conn->prepare($sql);
+        $query->execute();
+
+        return true;
+    }
 
     private static function fetchBy($cond) {
         $conn = DBConnection::getConnection();
@@ -74,15 +116,18 @@ class Wishlist_Model extends Base_Model {
 
         $query = $conn->prepare($sql);
         $query->execute();
-        return $query->fetchAll(PDO::FETCH_ASSOC);
+        $id = $conn->lastInsertId();
+        $this->setId($id);
+
+        return $this;
     }
 
-    public function fetchById($id) {
-        return $this->fetchBy(' id = ' . (int)$id);
+    public static function fetchById($id) {
+        return self::fetchBy(' id = ' . (int)$id);
     }
 
-    public function fetchByUserId($userId) {
-        return $this->fetchBy(' user_id = ' . (int)$userId);
+    public static function fetchByUserId($userId) {
+        return self::fetchBy(' user_id = ' . (int)$userId);
     }
 
     public function setModifiedAt($modifiedAt) {

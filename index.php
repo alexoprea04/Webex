@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 set_include_path(__DIR__);
 
 ini_set('display_errors', 1);

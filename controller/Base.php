@@ -31,6 +31,7 @@ class Base_Controller {
         preg_match('/([a-zA-Z]+)_Controller/s', $this->className, $matches);
         $data = $this->viewVars;
         $baseDir = Config::baseDir;
+        $baseDirImages = Config::baseDirImages;
 
         $filename =  'view/' .
             strtolower($matches[1])

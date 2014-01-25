@@ -50,16 +50,16 @@ class Products_Model extends Base_Model {
         return self::fetchBy(' id = ' . (int)$id);
     }
 
-    public static function fetchByCategoryId($categoryId) {
-        return self::fetchBy(' category_id = ' . (int)$categoryId);
+    public static function fetchAllByCategoryId($categoryId) {
+        return self::fetchAllBy(' category_id = ' . (int)$categoryId);
     }
 
-
-    public static function fetchAll() {
+    private static function fetchAllBy($cond = '1') {
         $conn = DBConnection::getConnection();
         $sql = 'SELECT *
                     FROM ' . self::TABLE . '
-                    WHERE  status > 0';
+                    WHERE ' . $cond . ' AND
+                        status > 0';
         $query = $conn->prepare($sql);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -67,8 +67,13 @@ class Products_Model extends Base_Model {
         foreach ($result AS $row) {
             $objects[] = self::arrayToClassObject($row);
         }
-
         return $objects;
+    }
+
+
+
+    public static function fetchAll() {
+        return self::fetchAllBy();
     }
 
     public function setModifiedAt($modifiedAt) {
