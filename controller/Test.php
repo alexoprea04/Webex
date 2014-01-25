@@ -9,7 +9,7 @@ class Test_Controller extends Base_Controller {
                     SELECT 1');
         $random->execute();
         $product = $random->fetchAll(PDO::FETCH_ASSOC);
-        
+
 
 
         //add var to view
