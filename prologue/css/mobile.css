@@ -66,6 +66,8 @@ h1,h2,h3,h4,h5,h6{
 	float: left;
 	width: 45px;
 	height: 45px;
+	margin-left: 30%;
+	margin-right: 10px;
 
 }
 .main img.next{
@@ -79,6 +81,5 @@ h1,h2,h3,h4,h5,h6{
 }
 p{
 	position: relative;
-	left: 40%;
 	font-size: 1.6em;
 }
