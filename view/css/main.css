@@ -1,0 +1,141 @@
+/* RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {text-decoration:none;
+	/* color: #fff !important; */
+}
+
+body { font-family: Helvetica, san-serif; }
+H1 { color: green; }
+
+/* Stack the two content containers */
+.main,
+.sidebar { display:block; width:100%; }
+
+/* First breakpoint at 576px */
+/* Inherits mobile styles, but floats containers to make columns */
+@media all and (min-width: 36em){
+	.main { float: left; width:80%; }
+	.sidebar { float: left; width:20%; }
+}
+
+/* Second breakpoint at 800px */
+/* Adjusts column proportions, tweaks base H1 */
+@media all and (min-width: 50em){
+	.main { width:70%; }
+	.sidebar { width:30%; }
+
+	/* You can also tweak any other styles in a breakpoint */
+	H1 { color: blue; font-size:1em }
+}
+
+
+.ui-icon-mareste-distanta {
+	background-image: url("../images/mareste-distanta.png");
+}
+.ui-icon-schimba-destinatia {
+	background-image: url("../images/schimba-destinatia.png");
+}
+
+@media (min-width:35em){
+
+/* wrap on wide viewports once open */
+
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-left,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-left,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-left,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-left {
+    margin-right: 17em;
+}
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-right,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-right,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-right,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-right {
+    margin-left: 17em;
+}
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal {
+    width: auto;	
+}
+
+/* disable "dismiss" on wide viewports */
+.ui-responsive-panel .ui-panel-dismiss-display-push {
+    display: none;
+}
+    	
+}
+
+/* CSS */
+.container-main {
+	width:100%;	
+}
+
+.header {
+		background: #277182;
+		background-repeat:none;
+		width:100%;
+		padding:10px;
+}
+.cb {clear:both !important}
+h2 {font-size:150%;font-weight:bold}
+
+    #owl-demo .item img{
+    display: block;
+    width: 100%;	
+    }
+.tab-content {
+    display:block;
+}
+.tab-content:first-child {
+    display:block;
+}
+a:visited{color:#fff}
+
+.ui-grid-a .ui-block-a{width:50%;}
+.ui-grid-a .ui-block-b{width:50%;}
+/* END CSS */
+
+
+
