@@ -22,7 +22,7 @@ require_once ('view/header.php');
 			<div class="localitati mar10t">
 				<ul data-role="listview" data-inset="true">
 												<li><a href="/Alerte/" id="11">Alerte pret</a></li>
-												<li><a href="/recurente/index" id="13">Cumparaturi recurente</a></li>
+												<li><a href="/Recurrent/index" id="13">Cumparaturi recurente</a></li>
 												<li><a href="/Random/" id="35">Produsul zilei</a></li>			
 				</ul>
 			</div>			

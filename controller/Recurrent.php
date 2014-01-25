@@ -1,6 +1,6 @@
 <?php
 
-class recurente_Controller extends Base_Controller {
+class Recurrent_Controller extends Base_Controller {
 	
     public function index() {
 		if($this->hasList()) {
@@ -41,10 +41,12 @@ class recurente_Controller extends Base_Controller {
 		}
 	}
 	
-	//alert list
-	public function alertList()
-	{
-
+	//create list
+	public function createList()
+	{	
+		if(isset($_POST)){
+			var_dump($_POST);
+		}
 	}	
 	
 }
