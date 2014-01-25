@@ -892,7 +892,7 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		width: 375px;
+		width: 325px;
 		height: 100%;
 		color: #fff;
 		background: #222729 url('images/overlay.png');
@@ -998,7 +998,11 @@
 					-ms-transition: none;
 					transition: none;
 				}
+				#nav ul li a:hover{
+				color: #fff;	
+				}
 				
+
 					#nav ul li a span
 					{
 						position: relative;
