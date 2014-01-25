@@ -21,10 +21,10 @@
 	</div>
 	<div class="main">
 	<ul>
-		<li><a href="#">Alerta produs</a><img src="images/next.png" alt="next"></li>
-		<li><a href="#">Cumparaturi recurente</a><img src="images/next.png" alt="next"></li>
-		<li><a href="#">Produsul zilei</a><img src="images/next.png" alt="next"></li>
-		<li><a href="#">Setari</a><img src="images/next.png" alt="next"></li>
+		<li><a href="#"><p>Alerta produs</p></a><img src="images/next.png" alt="next"></li>
+		<li><a href="#"><p>Cumparaturi recurente</p></a><img src="images/next.png" alt="next"></li>
+		<li><a href="#"><p>Produsul zilei</p></a><img src="images/next.png" alt="next"></li>
+		<li><a href="#"><p>Setari</p></a><img src="images/next.png" alt="next"></li>
 	</ul>
 	</div>
 </body>
