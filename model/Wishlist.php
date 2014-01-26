@@ -17,16 +17,32 @@ class Wishlist_Model extends Base_Model {
         $conn = DBConnection::getConnection();
         $sql = 'SELECT *
                     FROM ' . self::TABLE_PRODUCTS . '
-                    WHERE  status > 0';
+                    WHERE wishlist_id = ' . $this->getId() . '
+        ';
+
         $query = $conn->prepare($sql);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($result AS $row) {
-            $objects[] = Products_Model::fetchById($row['product_id']);
+            $objects[] = array(
+                    'productObject' => Products_Model::fetchById($row['product_id']),
+                    'target_price' => $row['product_target_price']
+            );
         }
 
         return $objects;
+    }
+
+    public function removeAllProducts() {
+        $conn = DBConnection::getConnection();
+        $sql = 'DELETE
+                    FROM ' . self::TABLE_PRODUCTS . '
+                    WHERE wishlist_id = ' . $this->getId() . '
+        ';
+
+        $query = $conn->prepare($sql);
+        $query->execute();
     }
 
 
