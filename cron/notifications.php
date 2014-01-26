@@ -26,7 +26,10 @@ $users = User_Model::fetchAll();
 foreach ($users AS $user) {
     //fetch eligible products for notification
     $sql = 'SELECT
-                pt.*, wpt.product_price AS old_product_price
+                pt.*,
+                wt.id AS list_id,
+                wpt.product_price AS old_product_price
+
                 FROM ' . Wishlist_Model::TABLE . ' wt
                  INNER JOIN ' . Wishlist_Model::TABLE_PRODUCTS . ' wpt
                     ON wt.id = wpt.wishlist_id
@@ -46,11 +49,17 @@ foreach ($users AS $user) {
                     (
                         user_id,
                         content,
-                        status
+                        status,
+                        list_id,
+                        list_type,
+                        product_id
                     ) VALUES (
                         ' . $user->getId() . ',
                         \'' . $content . '\',
-                        1
+                        1,
+                        ' . $row['list_id'] . ',
+                        1,
+                        ' . $row['id'] . '
                     )';
 
         $query = $conn->prepare($sql);

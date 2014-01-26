@@ -114,4 +114,12 @@ class Wishlist_Controller extends Base_Controller {
         $this->addVar('list', $list);
     }
 
+    public function removeNotification() {
+        if ((int)$_GET['notification_id'] > 0) {
+            $notificationId = (int)$_GET['notification_id'];
+            Notifications_Model::remove($notificationId);
+        }
+        die;
+    }
+
 }

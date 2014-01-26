@@ -44,12 +44,14 @@ foreach ($users AS $user) {
                         user_id,
                         content,
                         status,
-						list_id
+						list_id,
+						list_type
                     ) VALUES (
                         ' . $user->getId() . ',
                         \'' . $content . '\',
                         1,
-						' . $row['id'] . '
+						' . $row['id'] . ',
+						2
                     )';
 
         $query = $conn->prepare($sql);
