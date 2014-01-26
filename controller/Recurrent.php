@@ -10,6 +10,7 @@ class Recurrent_Controller extends Base_Controller {
 					SELECT r.*, (SELECT COUNT(*) FROM reccurent_products WHERE reccurent_list_id = r.id) AS produse
 					FROM reccurent_lists AS r
 					WHERE r.user_id = '".$this->app_user."'
+					ORDER BY next_shopping_date ASC
 					");
 				$sql->execute();
 				$lists = $sql->fetchAll(PDO::FETCH_ASSOC);	
@@ -66,7 +67,7 @@ class Recurrent_Controller extends Base_Controller {
 	
 	public function listProducts()
 	{
-		
+
 	}
 	
 }

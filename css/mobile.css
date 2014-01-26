@@ -126,3 +126,23 @@ div.description
 {
 	font-size: 1em;
 }
+a.wish-list-item
+{
+	border-bottom: 1px dashed #999999;
+	width: 99%;
+	margin-bottom: 10px;	
+	padding: 5px;
+	display: block;
+	text-decoration: none;
+	color: #000000;
+}
+div.wish-title
+{
+	font-size: 1.4em;
+	font-weight: bold;
+}
+div.wish-desc
+{
+	font-size: 1em;
+	color: #999999;
+}

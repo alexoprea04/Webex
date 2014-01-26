@@ -163,4 +163,23 @@ class Recurrent_Model extends Base_Model {
         return $this->id;
     }
 
+    public function removeAllProducts() {
+        $conn = DBConnection::getConnection();
+        $sql = 'DELETE
+                    FROM ' . self::TABLE_PRODUCTS . '
+                    WHERE id = ' . $this->getId() . '
+        ';
+
+        $query = $conn->prepare($sql);
+        $query->execute();
+    }
+	
+    public function addProduct($productId, $productPrice) {
+        $conn = DBConnection::getConnection();
+        $sql = '';
+        $query = $conn->prepare($sql);
+        $query->execute();
+
+        return true;
+    }
 }
