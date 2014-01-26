@@ -15,11 +15,11 @@ require_once ('view/header.php');
 		</div>
 	</div>
 	<div class="main">
-<form method="POST" action="<?=$baseDir?>Recurrent/postponeOneDay/">
+<form method="POST" action="/Recurrent/postponeOneDay/">
 	<input type="hidden" name="listId" value="<?=$data['list']->getId()?>" />
     <input type="submit" value="Amana cu o zi" style="width: 100%;">
 </form>	
-<form method="POST" action="<?=$baseDir?>Recurrent/saveProductsToList/">
+<form method="POST" action="/Recurrent/saveProductsToList/">
     <input type="submit" value="Salveaza produse" style="width: 100%;">
 
     <?php

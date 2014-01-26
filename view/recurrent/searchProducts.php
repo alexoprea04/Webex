@@ -94,7 +94,7 @@
                 </h2
                 <br>
                 <a href="javascript:void(0)" style="color: #8c8c8c;text-decoration: none" onclick="expandDescription(<?=$product->getId()?>)">
-                    <img src="<?=$baseDirImages?><?=$product->getImage()?>">
+                    <img src="/external/product_images/<?=$product->getImage()?>">
                 </a>
                 <br>
                 <input type="checkbox" name="products[]"
