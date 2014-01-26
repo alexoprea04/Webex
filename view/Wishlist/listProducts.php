@@ -22,8 +22,12 @@
             Pret: <?=$product->getPrice()?>
             <br>
             <img src="<?=$baseDirImages?><?=$product->getImage()?>">
-            <input type="checkbox" name="products[]" id="product_<?=$product->getId()?>" value="<?=$product->getId()?>">
-            <input type="text" name="product_price_<?=$product->getId()?>" id="product_price_<?=$product->getId()?>">
+            <input type="checkbox" name="products[]"
+                   id="product_<?=$product->getId()?>"
+                   onclick="document.getElementById('product_price_' + <?=$product->getId()?>).style.display = 'inline';"
+                   value="<?=$product->getId()?>">
+
+            <input type="text" name="product_price_<?=$product->getId()?>" id="product_price_<?=$product->getId()?>" style="display: none;">
             <hr>
         </div>
         <?php
