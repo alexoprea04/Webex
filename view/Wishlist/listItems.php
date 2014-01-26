@@ -1,3 +1,5 @@
+<a href="<?=$baseDir?>/Wishlist/addItem/">Adauga Lista</a>
+<hr>
 <?php
 foreach($data['lists'] AS $list) {
     ?>

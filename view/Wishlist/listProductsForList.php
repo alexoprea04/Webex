@@ -22,6 +22,8 @@
     }
     ?>
     <input type="hidden" name="listId" id="listId" value="<?=$data['list']->getId()?>">
+
+    <a href="<?=$baseDir?>/Wishlist/listProducts/?listId=<?=$data['list']->getId()?>">Adauga produse</a>
 </form>
 <script>
     function removeProductContainer(productId) {

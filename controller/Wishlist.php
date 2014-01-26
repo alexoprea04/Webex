@@ -23,6 +23,7 @@ class Wishlist_Controller extends Base_Controller {
             //redirect to listItems
             // @TODO - maybe redirect to categories listing and then to products from a categ ?
             header('Location: ' . Config::baseDir . 'Wishlist/listProducts/?listId=' . $list->getId());
+            return;
         }
         header('Location: ' . Config::baseDir . 'Wishlist/listItems/');
     }

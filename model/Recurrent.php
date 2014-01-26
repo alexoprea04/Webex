@@ -17,49 +17,53 @@ class Recurrent_Model extends Base_Model {
     private $modifiedAt;
 
     private static function fetchBy($cond) {
+        $conn = DBConnection::getConnection();
         $sql = 'SELECT *
                     FROM ' . self::TABLE . '
                     WHERE ' . $cond . '
                         AND status > 0
                     LIMIT 1';
-        $query = $this->db->prepare($sql);
+        $query = $conn->prepare($sql);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
-        return $this->arrayToClassObject($result[0]);
+        return self::arrayToClassObject($result[0]);
     }
 
     public function fetchAll() {
+        $conn = DBConnection::getConnection();
         $sql = 'SELECT *
                     FROM ' . self::TABLE . '
                     WHERE  status > 0';
-        $query = $this->db->prepare($sql);
+        $query = $conn->prepare($sql);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($result AS $row) {
-            $objects[] = $this->arrayToClassObject($result[0]);
+            $objects[] = $this->arrayToClassObject($row[0]);
         }
 
         return $objects;
     }
 
-    private function arrayToClassObject(array $array) {
-        $this->setId($array['id']);
-        $this->setName($array['name']);
-        $this->setDescription($array['description']);
-        $this->setNextShoppingDate($array['description']);
-        $this->setLastShoppingDate($array['description']);
-        $this->setShoppingInterval($array['description']);
-        $this->setStatus($array['status']);
-        $this->setUserId($array['user_id']);
-        $this->setCreatedAt($array['created_at']);
-        $this->setModifiedAt($array['modified_at']);
+    private static function arrayToClassObject(array $array) {
+        $obj = new self;
+        $obj->setId($array['id']);
+        $obj->setName($array['name']);
+        $obj->setDescription($array['description']);
+        $obj->setNextShoppingDate($array['description']);
+        $obj->setLastShoppingDate($array['description']);
+        $obj->setShoppingInterval($array['description']);
+        $obj->setStatus($array['status']);
+        $obj->setUserId($array['user_id']);
+        $obj->setCreatedAt($array['created_at']);
+        $obj->setModifiedAt($array['modified_at']);
 
-        return $this;
+        return $obj;
     }
 
     public function save() {
+        $conn = DBConnection::getConnection();
         $sql = "INSERT INTO " . self::TABLE . "
                 (
                     `user_id`,
@@ -81,13 +85,13 @@ class Recurrent_Model extends Base_Model {
                         NOW()
                     )";
 
-        $query = $this->db->prepare($sql);
+        $query = $conn->prepare($sql);
         $query->execute();
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function fetchById($id) {
-        return $this->fetchBy(' id = ' . (int)$id);
+    public static function fetchById($id) {
+        return self::fetchBy(' id = ' . (int)$id);
     }
 
     public function fetchByUserId($userId) {

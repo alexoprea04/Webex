@@ -55,11 +55,11 @@ class Base_Controller {
     }
 
     public function loadHeader() {
-        require_once(dirname(__DIR__) . '../view/header.php');
+        require_once(dirname(__DIR__) . '/view/header.php');
     }
 
     public function loadFooter() {
-        require_once(dirname(__DIR__) . '../view/footer.php');
+        require_once(dirname(__DIR__) . '/view/footer.php');
     }
 
 
