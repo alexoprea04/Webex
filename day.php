@@ -22,7 +22,7 @@
     <div class="main">
         <ul>
             <li>
-                <a href="#"><img src="prologue/images/avatar.jpg" alt="alerta" class="icons"><p>Product title</p></a>
+                <a href="#"><img src="images/avatar.png" alt="avatar" class="icons"><p>Product title</p></a>
                 <img src="images/next.png" alt="next"class="next">
             </li>
             <li>
