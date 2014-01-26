@@ -40,17 +40,25 @@ class Wishlist_Controller extends Base_Controller {
         $this->addVar('categories', $categories);
     }
 
+    /**
+     * used for adding products
+     */
     public function listProducts() {
         if(!isset($_GET['listId'])) {
             header('Location: ' . Config::baseDir . 'Wishlist/listItems/');
         }
-
-        if (isset($_GET['category_id']) && (int)$_GET['category_id'] > 0) {
-            $results = Products_Model::fetchAllByCategoryId((int)$_GET['category_id']);
+        $category = new Category_Model();
+        if (isset($_GET['categoryId']) && (int)$_GET['categoryId'] > 0) {
+            $category = Category_Model::fetchById($_GET['categoryId']);
+            $results = Products_Model::fetchAllByCategoryId((int)$_GET['categoryId']);
         } else {
             $results = Products_Model::fetchAll();
         }
 
+        $categories = Category_Model::fetchAll();
+
+        $this->addVar('categories', $categories);
+        $this->addVar('category', $category);
         $this->addVar('listId', $_GET['listId']);
         $this->addVar('products', $results);
     }
@@ -64,6 +72,7 @@ class Wishlist_Controller extends Base_Controller {
         $products = $_POST['products'];
 
         $list = Wishlist_Model::fetchById($listId);
+        $list->removeAllProducts();
         foreach ($products AS $productId) {
             $productPrice = $_POST['product_price_' . $productId];
             $list->addProduct($productId, $productPrice);
@@ -71,6 +80,36 @@ class Wishlist_Controller extends Base_Controller {
 
         header('Location: ' . Config::baseDir . 'Wishlist/listItems/?message=lista a fost adaugata');
 
+    }
+
+    /**
+     * list products for a list
+     */
+    public function listProductsForList() {
+        if (!isset($_GET['listId'])) {
+            header('Location: ' . Config::baseDir . 'Wishlist/listItems/');
+        }
+
+        $list = Wishlist_Model::fetchById($_GET['listId']);
+        $products = $list->fetchProducts();
+
+        $this->addVar('list', $list);
+        $this->addVar('products', $products);
+    }
+
+    public function productDetail() {
+        if (!isset($_GET['productId']) || !isset($_GET['listId'])) {
+            header('Location: ' . Config::baseDir . 'Wishlist/listItems/');
+        }
+
+        $productId = $_GET['productId'];
+        $listId = $_GET['listId'];
+
+        $product = Products_Model::fetchById($productId);
+        $list = Wishlist_Model::fetchById($listId);
+
+        $this->addVar('product', $product);
+        $this->addVar('list', $list);
     }
 
 }
