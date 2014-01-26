@@ -85,7 +85,7 @@ require_once ('view/header.php');
 			<a href="/Wishlist/listItems"><img src="/images/avatar.png" alt="alerta" class="icons"><p>Alerta produs</p></a>
 			<img src="/images/next.png" alt="next"class="next">
 		</li>
-		<li><a href="/Recurrent/index"><img src="/images/recurent_shopping.jpg" alt="recurent" class="icons"><p>Cumparaturi recurente</p></a>
+		<li><a href="/Recurrent/index"><img src="/images/recurent_shopping.png" alt="recurent" class="icons"><p>Cumparaturi recurente</p></a>
 			<img src="/images/next.png" alt="next" class="next">
 		</li>
 		<li><a href="/Random/index"><img src="/images/product_day.png" alt="alerta" class="icons"><p>Produsul zilei</p></a>
