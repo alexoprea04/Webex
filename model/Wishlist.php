@@ -23,7 +23,7 @@ class Wishlist_Model extends Base_Model {
         $query = $conn->prepare($sql);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
-
+        $objects = array();
         foreach ($result AS $row) {
             $objects[] = array(
                     'productObject' => Products_Model::fetchById($row['product_id']),
@@ -32,6 +32,20 @@ class Wishlist_Model extends Base_Model {
         }
 
         return $objects;
+    }
+
+    public function fetchNumberOfProducts() {
+        $conn = DBConnection::getConnection();
+        $sql = 'SELECT count(1) AS product_number
+                    FROM ' . self::TABLE_PRODUCTS . '
+                    WHERE wishlist_id = ' . $this->getId() . '
+        ';
+
+        $query = $conn->prepare($sql);
+        $query->execute();
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result[0]['product_number'];
     }
 
     public function removeAllProducts() {

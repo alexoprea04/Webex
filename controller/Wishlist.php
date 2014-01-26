@@ -28,8 +28,8 @@ class Wishlist_Controller extends Base_Controller {
     }
 
     public function listItems() {
-        $wishlists = new Wishlist_Model();
-        $results = $wishlists->fetchAll();
+
+        $results = Wishlist_Model::fetchAll();
 
         $this->addVar('lists', $results);
     }
