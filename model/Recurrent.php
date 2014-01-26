@@ -51,9 +51,9 @@ class Recurrent_Model extends Base_Model {
         $obj->setId($array['id']);
         $obj->setName($array['name']);
         $obj->setDescription($array['description']);
-        $obj->setNextShoppingDate($array['description']);
-        $obj->setLastShoppingDate($array['description']);
-        $obj->setShoppingInterval($array['description']);
+        $obj->setNextShoppingDate($array['next_shopping_date']);
+        $obj->setLastShoppingDate($array['last_shopping_date']);
+        $obj->setShoppingInterval($array['shopping_interval']);
         $obj->setStatus($array['status']);
         $obj->setUserId($array['user_id']);
         $obj->setCreatedAt($array['created_at']);
@@ -224,7 +224,6 @@ class Recurrent_Model extends Base_Model {
         return true;
     }
 	
-	
     public function postpone() {
         $conn = DBConnection::getConnection();
         $sql = 'UPDATE ' . self::TABLE . '  SET next_shopping_date = next_shopping_date + 1 WHERE id = ' . $this->getId() . '';
@@ -234,4 +233,20 @@ class Recurrent_Model extends Base_Model {
 
         return true;
     }
+	
+	public function updateNextDate()
+	{
+        $conn = DBConnection::getConnection();
+		$new_shopping_date = strtotime($this->getNextShoppingDate()) + $this->getShoppingInterval() * 24 * 60 * 60;
+		$new_shopping_date = date('Y-m-d', $new_shopping_date);
+        $sql = "UPDATE " . self::TABLE . "  SET 
+				next_shopping_date = '" . $new_shopping_date . "',
+				last_shopping_date = '" . date('Y-m-d', time()) . "'
+				WHERE id = '" . $this->getId() . "'";
+
+        $query = $conn->prepare($sql);
+        $query->execute();
+
+        return true;		
+	}
 }

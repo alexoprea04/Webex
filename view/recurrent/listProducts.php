@@ -15,6 +15,10 @@ require_once ('view/header.php');
 		</div>
 	</div>
 	<div class="main">
+<form method="POST" action="/Recurrent/buy/">
+	<input type="hidden" name="listId" value="<?=$data['list']->getId()?>" />
+    <input type="submit" value="Cumpara acum" style="width: 100%; background-color: #408500; color: #FFF; font-weight: bold;">
+</form>	
 <form method="POST" action="/Recurrent/postponeOneDay/">
 	<input type="hidden" name="listId" value="<?=$data['list']->getId()?>" />
     <input type="submit" value="Amana cu o zi" style="width: 100%;">

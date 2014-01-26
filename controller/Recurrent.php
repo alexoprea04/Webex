@@ -157,4 +157,27 @@ class Recurrent_Controller extends Base_Controller {
         }
         header('Location: /Recurrent/index/');	
 	}
+	
+	public function buy()
+	{
+         if (!isset($_POST['listId'])) {
+            header('Location: /Recurrent/index/');
+        }
+		
+        $list = Recurrent_Model::fetchById($_POST['listId']);
+		$products = $list->fetchProducts();
+
+        $this->addVar('list', $list);
+        $this->addVar('products', $products);
+	}
+	
+	public function buyOk()
+	{
+         if (!isset($_POST['listId'])) {
+            header('Location: /Recurrent/index/');
+        }
+		
+        $list = Recurrent_Model::fetchById($_POST['listId']);
+		$list->updateNextDate();
+	}
 }
