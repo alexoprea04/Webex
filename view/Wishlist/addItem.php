@@ -33,7 +33,7 @@
 </div>
 <div class="main main_container_form">
     <br>
-    <form action="<?=$baseDir?>Wishlist/saveItem/" method="POST">
+    <form action="/Wishlist/saveItem/" method="POST">
         <label>Nume</label>
         <span>
             <input type="text" name="name" class="ui-corner-all medium_height" >

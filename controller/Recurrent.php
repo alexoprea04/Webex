@@ -61,14 +61,14 @@ class Recurrent_Controller extends Base_Controller {
 			$list->setCreatedAt(date('Y-m-d H:i:s', time()));
 
 			$list->save();
-			header('Location: ' . Config::baseDir . 'Recurrent/listProducts/');
+			header('Location: /Recurrent/listProducts/');
 		}
 	}	
 	
 	public function listProducts()
 	{
         if (!isset($_GET['id'])) {
-            header('Location: ' . Config::baseDir . 'Recurrent/index/');
+            header('Location: /Recurrent/index/');
         }
 		
         $list = Recurrent_Model::fetchById($_GET['id']);
@@ -94,7 +94,7 @@ class Recurrent_Controller extends Base_Controller {
             $list->addProduct($productId, $productQuantity);
         }
 
-        header('Location: ' . Config::baseDir . 'Recurrent/index/?message=lista a fost adaugata');
+        header('Location: /Recurrent/index/?message=lista a fost adaugata');
 
     }	
 

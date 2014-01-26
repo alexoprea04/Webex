@@ -74,7 +74,7 @@
         ?>
     </select>
 
-    <form method="POST" action="<?=$baseDir?>Recurrent/saveProductsToList/">
+    <form method="POST" action="/Recurrent/saveProductsToList/">
         <input type="submit" value="Salveaza produse">
     <br>
     <br>
@@ -133,7 +133,7 @@
     }
 
     function reloadWithCategory(categoryId) {
-        window.location = "<?=$baseDir?>Recurrent/searchProducts/?listId=<?=$data['listId']?>&categoryId=" + categoryId;
+        window.location = "/Recurrent/searchProducts/?listId=<?=$data['listId']?>&categoryId=" + categoryId;
     }
 
     function expandDescription(productId) {
