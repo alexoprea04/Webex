@@ -22,10 +22,10 @@ class Wishlist_Controller extends Base_Controller {
 
             //redirect to listItems
             // @TODO - maybe redirect to categories listing and then to products from a categ ?
-            header('Location: ' . Config::baseDir . 'Wishlist/listProducts/?listId=' . $list->getId());
+            header('Location: /Wishlist/listProducts/?listId=' . $list->getId());
             return;
         }
-        header('Location: ' . Config::baseDir . 'Wishlist/listItems/');
+        header('Location: /Wishlist/listItems/');
     }
 
     public function listItems() {
@@ -46,7 +46,7 @@ class Wishlist_Controller extends Base_Controller {
      */
     public function listProducts() {
         if(!isset($_GET['listId'])) {
-            header('Location: ' . Config::baseDir . 'Wishlist/listItems/');
+            header('Location: /Wishlist/listItems/');
         }
         $category = new Category_Model();
         if (isset($_GET['categoryId']) && (int)$_GET['categoryId'] > 0) {
@@ -66,7 +66,7 @@ class Wishlist_Controller extends Base_Controller {
 
     public function saveProductsToList() {
         if (!isset($_POST['listId']) || !$_POST['products']) {
-            header('Location: ' . Config::baseDir . 'Wishlist/listItems/');
+            header('Location: /Wishlist/listItems/');
         }
 
         $listId = (int)$_POST['listId'];
@@ -80,7 +80,7 @@ class Wishlist_Controller extends Base_Controller {
             $list->addProduct($productId, $productPrice);
         }
 
-        header('Location: ' . Config::baseDir . 'Wishlist/listItems/?message=lista a fost adaugata');
+        header('Location: /Wishlist/listItems/?message=lista a fost adaugata');
 
     }
 
@@ -89,7 +89,7 @@ class Wishlist_Controller extends Base_Controller {
      */
     public function listProductsForList() {
         if (!isset($_GET['listId'])) {
-            header('Location: ' . Config::baseDir . 'Wishlist/listItems/');
+            header('Location: /Wishlist/listItems/');
         }
 
         $list = Wishlist_Model::fetchById($_GET['listId']);
@@ -101,7 +101,7 @@ class Wishlist_Controller extends Base_Controller {
 
     public function productDetail() {
         if (!isset($_GET['productId']) || !isset($_GET['listId'])) {
-            header('Location: ' . Config::baseDir . 'Wishlist/listItems/');
+            header('Location: /Wishlist/listItems/');
         }
 
         $productId = $_GET['productId'];
