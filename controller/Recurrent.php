@@ -143,5 +143,18 @@ class Recurrent_Controller extends Base_Controller {
         $this->addVar('listId', $_GET['listId']);
         $this->addVar('products', $results);
     }
-	
+
+	public function postponeOneDay() {
+        if (isset($_POST['listId'])) {
+
+        $list = Recurrent_Model::fetchById($_POST['listId']);
+		$list->postpone();
+
+            //redirect to listItems
+            // @TODO - maybe redirect to categories listing and then to products from a categ ?
+            header('Location: /Recurrent/listProducts/?id=' . $list->getId());
+            return;
+        }
+        header('Location: /Recurrent/index/');	
+	}
 }

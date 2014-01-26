@@ -223,4 +223,15 @@ class Recurrent_Model extends Base_Model {
 
         return true;
     }
+	
+	
+    public function postpone() {
+        $conn = DBConnection::getConnection();
+        $sql = 'UPDATE ' . self::TABLE . '  SET next_shopping_date = next_shopping_date + 1 WHERE id = ' . $this->getId() . '';
+		
+        $query = $conn->prepare($sql);
+        $query->execute();
+
+        return true;
+    }
 }
