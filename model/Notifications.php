@@ -16,6 +16,15 @@ class Notifications_Model extends Base_Model {
     const LIST_TYPE_WISHLIST = 1;
     const LIST_TYPE_RECCURENCE = 2;
 
+    public static function remove($notificationId) {
+        $conn = DBConnection::getConnection();
+        $sql = 'DELETE
+                    FROM ' . self::TABLE . '
+                    WHERE  id = ' . $notificationId;
+        $query = $conn->prepare($sql);
+        $query->execute();
+    }
+
     private static function arrayToClassObject(array $array) {
         $obj = new self;
         $obj->setId($array['id']);

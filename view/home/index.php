@@ -125,9 +125,13 @@ if ( isset($data['notifications']) && count($data['notifications']) > 0 ) {
             }
             ?>
 
-            <li>
+            <li id="notification_container_<?=$notification->getId()?>">
                 <img class="icons" alt="alerta" src="<?=$imageUrl?>"  style="width:1.7em;height:1.7em;margin-left:1em;">
-               <a href="<?=$url?>"> <?=$notification->getContent()?></a>
+                <a href="<?=$url?>"> <?=$notification->getContent()?> </a>
+
+                <a href="javascript:void(0)" onclick="deleteNotification(<?=$notification->getId()?>)">
+                    <img src="/images/close_a_32.png" style="width:1em;height:1em;">
+                </a>
             </li>
             <?php
         }
@@ -138,6 +142,23 @@ if ( isset($data['notifications']) && count($data['notifications']) > 0 ) {
         function hideNotifications() {
             document.getElementById('overlay').style.display = 'none';
             document.getElementById('notifications').style.display = 'none';
+        }
+
+        function deleteNotification(notificationId) {
+            document.getElementById('notification_container_' + notificationId).remove();
+
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            xmlhttp.open("GET","<?=$baseDir?>/Wishlist/removeNotification/?notification_id=" + notificationId,true);
+            xmlhttp.send();
         }
     </script>
 <?php
