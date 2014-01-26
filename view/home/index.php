@@ -17,7 +17,7 @@ require_once ('view/header.php');
 	<div class="main">
 	<ul>
 		<li>
-			<a href="/Wishlist/addItem"><img src="/images/avatar.png" alt="alerta" class="icons"><p>Alerta produs</p></a>
+			<a href="/Wishlist/listItems"><img src="/images/avatar.png" alt="alerta" class="icons"><p>Alerta produs</p></a>
 			<img src="/images/next.png" alt="next"class="next">
 		</li>
 		<li><a href="/Recurrent/index"><img src="/images/recurent_shopping.jpg" alt="recurent" class="icons"><p>Cumparaturi recurente</p></a>

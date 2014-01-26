@@ -73,8 +73,9 @@ class Wishlist_Controller extends Base_Controller {
         $products = $_POST['products'];
 
         $list = Wishlist_Model::fetchById($listId);
-        $list->removeAllProducts();
+
         foreach ($products AS $productId) {
+            $list->removeProductsById($productId);
             $productPrice = $_POST['product_price_' . $productId];
             $list->addProduct($productId, $productPrice);
         }
