@@ -104,11 +104,11 @@
 
                 <span id="product_price_container_<?=$product->getId()?>" style="display: none;margin-top:1em;">
                     <br>
-                    Pret <input type="text" name="product_price_<?=$product->getId()?>" id="product_price_<?=$product->getId()?>" style="width:10em;padding-top:0px;margin-top:0px;">
+                    Pret <input type="text" name="product_price_<?=$product->getId()?>" id="product_price_<?=$product->getId()?>" style="width:8em;padding-top:0px;margin-top:0px;"> RON
                 </span>
                 <br>
                 <br>
-                <span id="product_description_<?=$product->getId()?>" style="display:none"><?=$product->getDescription()?></span>
+                <span id="product_description_<?=$product->getId()?>" style="display:none"><?=$product->getDescription()?><div style="clear:both"></div></span>
 
 
             </div>
@@ -116,7 +116,11 @@
             $i++;
         }
         ?>
-        <input type="button" onclick="loadMore()" value="Mai multe" style="margin:1em 0 2em">
+        <br>
+
+        <input type="button" onclick="loadMore()" value="Mai multe">
+<br>
+        <input type="submit" value="Salveaza produse" style="margin:1em 0 2em">
         <input type="hidden" name="listId" id="listId" value="<?=$data['listId']?>">
     </form>
 </div>

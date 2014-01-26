@@ -48,11 +48,11 @@ class Wishlist_Model extends Base_Model {
         return $result[0]['product_number'];
     }
 
-    public function removeAllProducts() {
+    public function removeProductsById($productId) {
         $conn = DBConnection::getConnection();
         $sql = 'DELETE
                     FROM ' . self::TABLE_PRODUCTS . '
-                    WHERE wishlist_id = ' . $this->getId() . '
+                    WHERE product_id = ' . $productId . '
         ';
 
         $query = $conn->prepare($sql);
