@@ -3,6 +3,8 @@ class Products_Model extends Base_Model {
 
     const TABLE = 'products';
 
+    private static $replaceArr = array('Â', 'â¢');
+
     private $id;
     private $categoryId;
     private $name;
@@ -19,7 +21,7 @@ class Products_Model extends Base_Model {
         $obj = new self();
         $obj->setId($array['id']);
         $obj->setCategoryId($array['category_id']);
-        $obj->setName($array['name']);
+        $obj->setName(str_replace(self::$replaceArr, '', $array['name']));
         $obj->setModel($array['model']);
         $obj->setDescription($array['description']);
         $obj->setPrice($array['price']);
