@@ -3,7 +3,7 @@ html,body{
 	height: 100%;
 	margin: 0 auto;
 	padding: 0;
-	background: #f0f0f0;
+	background: #fff;
 }
 .header{
 	width: 99.1%;
@@ -82,4 +82,47 @@ h1,h2,h3,h4,h5,h6{
 p{
 	position: relative;
 	font-size: 1.2em;
+}
+a.buy-button
+{
+	display: block;
+	border-radius: 5px;
+	background-color: #408500;
+	font-weight: bold;
+	color: #FFFFFF;
+	width: 100px;
+	padding: 3px;
+	text-align: center;
+	text-decoration: none;
+	margin-bottom: 5px;
+}
+a.wish-button
+{
+	display: block;
+	border-radius: 5px;
+	background-color: #CCCCCC;
+	font-weight: bold;
+	color: #000000;
+	width: 100px;
+	padding: 3px;
+	text-align: center;
+	text-decoration: none;
+	margin-bottom: 5px;
+}
+a.list-button
+{
+	display: block;
+	border-radius: 5px;
+	background-color: #CCCCCC;
+	font-weight: bold;
+	color: #000000;
+	width: 100px;
+	padding: 3px;
+	text-align: center;
+	text-decoration: none;
+	margin-bottom: 5px;
+}
+div.description
+{
+	font-size: 1em;
 }
