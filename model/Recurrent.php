@@ -87,7 +87,10 @@ class Recurrent_Model extends Base_Model {
 
         $query = $conn->prepare($sql);
         $query->execute();
-        return $query->fetchAll(PDO::FETCH_ASSOC);
+        $id = $conn->lastInsertId();
+        $this->setId($id);
+
+        return $this;
     }
 
     public static function fetchById($id) {
@@ -172,9 +175,9 @@ class Recurrent_Model extends Base_Model {
         $conn = DBConnection::getConnection();
         $sql = 'SELECT *
                     FROM ' . self::TABLE_PRODUCTS . '
-                    WHERE list_id = ' . $this->getId() . '
+                    WHERE reccurent_list_id = ' . $this->getId() . '
         ';
-
+		
         $query = $conn->prepare($sql);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -182,7 +185,7 @@ class Recurrent_Model extends Base_Model {
         foreach ($result AS $row) {
             $objects[] = array(
                     'productObject' => Products_Model::fetchById($row['product_id']),
-                    'target_price' => $row['product_target_price']
+                    'productQuantity' =>$row['product_quantity']
             );
         }
 
@@ -193,16 +196,28 @@ class Recurrent_Model extends Base_Model {
         $conn = DBConnection::getConnection();
         $sql = 'DELETE
                     FROM ' . self::TABLE_PRODUCTS . '
-                    WHERE id = ' . $this->getId() . '
+                    WHERE reccurent_list_id = ' . $this->getId() . '
         ';
 
         $query = $conn->prepare($sql);
         $query->execute();
     }
 	
-    public function addProduct($productId, $productPrice) {
+    public function addProduct($productId, $productQuantity) {
         $conn = DBConnection::getConnection();
-        $sql = '';
+        $sql = 'INSERT INTO ' . self::TABLE_PRODUCTS . ' (
+                        reccurent_list_id,
+                        product_id,
+                        product_quantity
+                    )
+                    SELECT
+                            ' . $this->getId() . ',
+                            p.id,
+                            ' . $productQuantity . '
+                        FROM ' . Products_Model::TABLE . ' AS p
+                        WHERE p.id = ' . $productId . '
+                    ';
+		
         $query = $conn->prepare($sql);
         $query->execute();
 

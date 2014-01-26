@@ -25,9 +25,9 @@ require_once ('view/header.php');
             Nume: <?=$product['productObject']->getName()?><br>
             Pret: <?=$product['productObject']->getPrice()?>
             <br>
-            <img src="<?=$baseDirImages?><?=$product['productObject']->getImage()?>">
+            <img src="/external/product_images/<?=$product['productObject']->getImage()?>">
 
-            <input type="text" name="product_price_<?=$product['productObject']->getId()?>" id="product_price_<?=$product['productObject']->getId()?>" value="<?=$product['target_price']?>">
+            Cantitate: <input type="text" name="product_quantity_<?=$product['productObject']->getId()?>" id="product_quantity_<?=$product['productObject']->getId()?>" value="<?=$product['productQuantity']?>">
             <input type="hidden" name="products[]" value="<?=$product['productObject']->getId()?>">
             <a href="javascript:void();" onclick="removeProductContainer(<?=$product['productObject']->getId()?>)">remove</a>
             <hr>

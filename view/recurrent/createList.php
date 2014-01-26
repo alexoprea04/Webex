@@ -1,8 +1,21 @@
 <?php
 require_once ('view/header.php');
 ?>
-<div>
-	<form method="post" action="">
+	<div class="header">
+		<div class="buttons">
+			<div class="home">
+				<a href="/Home/index"><img src="/images/home.jpeg" alt="home" width='49px' height='40'>
+				</a>
+			</div>
+			<div class="title"><h1>Cumparaturi</h1></div>
+			<div class="menu">
+				<a href="/Settings/index"><img src="/images/menu.png" alt="menu"></a>
+			</div>
+			
+		</div>
+	</div>
+	<div class="main">
+	<form method="post" action="/Recurrent/saveItem/">
 		<div>Nume lista:</div>
 		<div><input type="text" name="name" /></div>
 		<div>Scurta descriere:</div>
