@@ -9,7 +9,7 @@ require_once ('view/header.php');
 			</div>
 			<div class="title"><h1>Wx Alerts</h1></div>
 			<div class="menu">
-				<a href="#"><img src="/images/menu.png" alt="menu"></a>
+				<a href="/Settings/index"><img src="/images/menu.png" alt="menu"></a>
 			</div>
 			
 		</div>
