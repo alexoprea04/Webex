@@ -42,6 +42,7 @@
         </li>
 
         <?php
+        if (isset($data['lists'])) {
             foreach($data['lists'] AS $list) {
                 ?>
                 <li>
@@ -54,8 +55,9 @@
                     </a>
 
                 </li>
-                <?php
+            <?php
             }
+        }
         ?>
     </ul>
 
