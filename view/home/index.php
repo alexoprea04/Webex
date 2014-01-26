@@ -52,15 +52,15 @@ require_once ('view/header.php');
     .notifications ul li {
         border-bottom: 1px dashed #999999;
         color: #000000;
-        height: 2em;
+        min-height: 2em;
         margin-bottom: 5px;
-        position: relative;
+        padding-bottom: 5px;
         width: 100%;
     }
 
     .notifications ul li a {
         color: #000000;
-        display: inline-block;
+
         height: 100%;
         margin: 4px auto 0 1em;
         vertical-align: top;
@@ -117,10 +117,10 @@ if ( isset($data['notifications']) && count($data['notifications']) > 0 ) {
         foreach ($data['notifications'] AS $notification) {
 
             if ($notification->getListType() == Notifications_Model::LIST_TYPE_WISHLIST) {
-                $url = $baseDir . '/Wishlist/productDetail/?listId=' . $notification->getListId() . '&productId=' . $notification->getProductId();
+                $url = '/Wishlist/productDetail/?listId=' . $notification->getListId() . '&productId=' . $notification->getProductId();
                 $imageUrl = '/images/avatar.png';
             } else {
-                $url = $baseDir . '/Recurrent/listProducts/?id=' . $notification->getListId();
+                $url = '/Recurrent/listProducts/?id=' . $notification->getListId();
                 $imageUrl = '/images/recurent_shopping.jpg';
             }
             ?>
@@ -132,6 +132,7 @@ if ( isset($data['notifications']) && count($data['notifications']) > 0 ) {
                 <a href="javascript:void(0)" onclick="deleteNotification(<?=$notification->getId()?>)">
                     <img src="/images/close_a_32.png" style="width:1em;height:1em;">
                 </a>
+                <div style="clear:both"></div>
             </li>
             <?php
         }
@@ -157,7 +158,7 @@ if ( isset($data['notifications']) && count($data['notifications']) > 0 ) {
                 xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
             }
 
-            xmlhttp.open("GET","<?=$baseDir?>/Wishlist/removeNotification/?notification_id=" + notificationId,true);
+            xmlhttp.open("GET","/Wishlist/removeNotification/?notification_id=" + notificationId,true);
             xmlhttp.send();
         }
     </script>

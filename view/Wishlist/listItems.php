@@ -35,7 +35,7 @@
     <ul>
         <li>
             <p>
-                <a href="<?=$baseDir?>/Wishlist/addItem/">
+                <a href="/Wishlist/addItem/">
                     <input type="button" value="Adauga Lista" style="width:100%;height:3em">
                 </a>
             </p>
@@ -46,7 +46,7 @@
             foreach($data['lists'] AS $list) {
                 ?>
                 <li>
-                    <a href="<?=$baseDir?>Wishlist/listProductsForList/?listId=<?=$list->getId()?>">
+                    <a href="/Wishlist/listProductsForList/?listId=<?=$list->getId()?>">
                         <p>
                             <?=$list->getName()?> (<?=$list->fetchNumberOfProducts()?>)
                             <img src="/images/next.png" alt="next" class="next" style="margin:0;">

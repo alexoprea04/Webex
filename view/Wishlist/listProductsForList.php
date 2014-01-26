@@ -62,7 +62,7 @@
     </div>
 </div>
 <div class="main main_container_form">
-    <form method="POST" action="<?=$baseDir?>Wishlist/saveProductsToList/">
+    <form method="POST" action="/Wishlist/saveProductsToList/">
         <?php
         if (count($data['products']) > 0) {
             ?>
@@ -102,7 +102,7 @@
         ?>
         <input type="hidden" name="listId" id="listId" value="<?=$data['list']->getId()?>">
 
-        <a href="<?=$baseDir?>/Wishlist/listProducts/?listId=<?=$data['list']->getId()?>" style="text-decoration: none"><input type="button" value="Adauga produse"></a>
+        <a href="/Wishlist/listProducts/?listId=<?=$data['list']->getId()?>" style="text-decoration: none"><input type="button" value="Adauga produse"></a>
     </form>
 </div>
 <script>
