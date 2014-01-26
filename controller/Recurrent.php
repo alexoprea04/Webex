@@ -67,7 +67,15 @@ class Recurrent_Controller extends Base_Controller {
 	
 	public function listProducts()
 	{
+        if (!isset($_GET['id'])) {
+            header('Location: ' . Config::baseDir . 'Recurrent/index/');
+        }
+		
+        $list = Recurrent_Model::fetchById($_GET['id']);
+		$products = $list->fetchProducts();
 
+        $this->addVar('list', $list);
+        $this->addVar('products', $products);
 	}
 	
 }

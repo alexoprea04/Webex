@@ -3,6 +3,7 @@
 class Recurrent_Model extends Base_Model {
 
     const TABLE = 'reccurent_lists';
+    const TABLE_PRODUCTS = 'reccurent_products';
 
     private $id;
     private $userId;
@@ -15,7 +16,7 @@ class Recurrent_Model extends Base_Model {
     private $createdAt;
     private $modifiedAt;
 
-    private function fetchBy($cond) {
+    private static function fetchBy($cond) {
         $sql = 'SELECT *
                     FROM ' . self::TABLE . '
                     WHERE ' . $cond . '
@@ -163,6 +164,27 @@ class Recurrent_Model extends Base_Model {
         return $this->id;
     }
 
+    public function fetchProducts() {
+        $conn = DBConnection::getConnection();
+        $sql = 'SELECT *
+                    FROM ' . self::TABLE_PRODUCTS . '
+                    WHERE list_id = ' . $this->getId() . '
+        ';
+
+        $query = $conn->prepare($sql);
+        $query->execute();
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+        $objects = array();
+        foreach ($result AS $row) {
+            $objects[] = array(
+                    'productObject' => Products_Model::fetchById($row['product_id']),
+                    'target_price' => $row['product_target_price']
+            );
+        }
+
+        return $objects;
+    }	
+	
     public function removeAllProducts() {
         $conn = DBConnection::getConnection();
         $sql = 'DELETE
