@@ -2,15 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/Notifications.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/Home.php" afterPath="$PROJECT_DIR$/controller/Home.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Wishlist.php" afterPath="$PROJECT_DIR$/model/Wishlist.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Wishlist/listItems.php" afterPath="$PROJECT_DIR$/view/Wishlist/listItems.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/home/index.php" afterPath="$PROJECT_DIR$/view/home/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Wishlist/listProductsForList.php" afterPath="$PROJECT_DIR$/view/Wishlist/listProductsForList.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cron/notifications-list.php" afterPath="$PROJECT_DIR$/cron/notifications-list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cron/notifications.php" afterPath="$PROJECT_DIR$/cron/notifications.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Wishlist/productDetail.php" afterPath="$PROJECT_DIR$/view/Wishlist/productDetail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Webex.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390665564058" ignored="false" />
     <file path="/parser.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390674836085" ignored="false" />
     <file path="/autoloader.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390699925349" ignored="false" />
-    <file path="/index.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390708534187" ignored="false" />
+    <file path="/index.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390715883157" ignored="false" />
     <file path="/Model_Products.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390658020418" ignored="false" />
     <file path="/Products.model.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390659608903" ignored="false" />
     <file path="/Base_Controller.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390661083525" ignored="false" />
@@ -19,7 +26,7 @@
     <file path="/Base.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390707235673" ignored="false" />
     <file path="/.htaccess" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390663972688" ignored="false" />
     <file path="/dbConnection.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390685592060" ignored="false" />
-    <file path="/Wishlist.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390710408949" ignored="false" />
+    <file path="/Wishlist.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390714354623" ignored="false" />
     <file path="/Wishilist.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390677581053" ignored="false" />
     <file path="/Products.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390689392522" ignored="false" />
     <file path="/addForm.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390682365168" ignored="false" />
@@ -28,12 +35,14 @@
     <file path="/listProducts.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390708985564" ignored="false" />
     <file path="/addItem.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390702743925" ignored="false" />
     <file path="/Category.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390685890356" ignored="false" />
-    <file path="/productDetail.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390692048190" ignored="false" />
-    <file path="/listProductsForList.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390708779075" ignored="false" />
+    <file path="/productDetail.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390716174319" ignored="false" />
+    <file path="/listProductsForList.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390713211620" ignored="false" />
     <file path="/wishlistNotifications.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390693409161" ignored="false" />
-    <file path="/notifications.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390701033480" ignored="false" />
+    <file path="/notifications.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390713308875" ignored="false" />
     <file path="/User.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390700211033" ignored="false" />
     <file path="/Recurrent.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390706708027" ignored="false" />
+    <file path="/Notifications.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390713451854" ignored="false" />
+    <file path="/Home.php" changelist="749e53f8-97e8-4e58-bbf7-6ab23f0c2507" time="1390712861665" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,65 +62,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="addItem.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/Wishlist/addItem.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="360" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Wishlist.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Wishlist.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Wishlist.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="27" selection-start="3366" selection-end="3366" vertical-scroll-proportion="0.3534279">
+            <state line="99" column="23" selection-start="3084" selection-end="3084" vertical-scroll-proportion="-6.1960783">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listProducts.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/Wishlist/listProducts.php">
+      <file leaf-file-name="notifications.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cron/notifications.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="17" selection-start="3915" selection-end="3915" vertical-scroll-proportion="-14.384615">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#h2#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#1;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#span#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#span#1;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#2;n#form#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
+            <state line="37" column="24" selection-start="1025" selection-end="1025" vertical-scroll-proportion="-11.269231">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listProductsForList.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/Wishlist/listProductsForList.php">
+      <file leaf-file-name="Notifications.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/Notifications.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="146" selection-start="1876" selection-end="1876" vertical-scroll-proportion="-10.769231">
-              <folding>
-                <element signature="n#style#0;n#h2#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#h2#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#1;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productDetail.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/Wishlist/productDetail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="26" column="27" selection-start="692" selection-end="692" vertical-scroll-proportion="-11.269231">
               <folding />
             </state>
           </provider>
@@ -120,7 +92,7 @@
       <file leaf-file-name="Home.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/Home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="6" column="57" selection-start="144" selection-end="144" vertical-scroll-proportion="-3.9230769">
               <folding />
             </state>
           </provider>
@@ -129,37 +101,66 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/home/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="40" selection-start="460" selection-end="460" vertical-scroll-proportion="-12.423077">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listItems.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/Wishlist/listItems.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="9" selection-start="1625" selection-end="1625" vertical-scroll-proportion="-31.538462">
+            <state line="112" column="0" selection-start="3014" selection-end="3014" vertical-scroll-proportion="-14.538462">
               <folding>
-                <element signature="n#style#0;n#input#0;n#a#0;n#p#0;n#li#0;n#ul#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#p#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="e#2751#2769#0" expanded="true" />
+                <element signature="e#2806#2825#0" expanded="true" />
+                <element signature="e#3686#3735#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="productDetail.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/Wishlist/productDetail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="18" selection-start="389" selection-end="389" vertical-scroll-proportion="-12.423077">
+            <state line="37" column="8" selection-start="847" selection-end="847" vertical-scroll-proportion="0.72215843">
+              <folding>
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listProducts.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/Wishlist/listProducts.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="86" column="93" selection-start="2338" selection-end="2382" vertical-scroll-proportion="-11.615385">
+              <folding>
+                <element signature="n#style#0;n#h2#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#h2#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#1;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listProductsForList.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/Wishlist/listProductsForList.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="2" selection-start="558" selection-end="946" vertical-scroll-proportion="-7.1923075">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Recurrent.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/Recurrent.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="37.26923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Base.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/Base.php">
+      <file leaf-file-name="Wishlist.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/Wishlist.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="34" selection-start="1443" selection-end="1443" vertical-scroll-proportion="-37.26923">
+            <state line="102" column="35" selection-start="3146" selection-end="3155" vertical-scroll-proportion="-23.384615">
               <folding />
             </state>
           </provider>
@@ -183,22 +184,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/model/Products.php" />
-        <option value="$PROJECT_DIR$/view/Wishlist/productDetail.php" />
-        <option value="$PROJECT_DIR$/cron/wishlistNotifications.php" />
-        <option value="$PROJECT_DIR$/model/User.php" />
         <option value="$PROJECT_DIR$/include/autoloader.php" />
-        <option value="$PROJECT_DIR$/cron/notifications.php" />
         <option value="$PROJECT_DIR$/view/Wishlist/addItem.php" />
         <option value="$PROJECT_DIR$/view/header.php" />
         <option value="$PROJECT_DIR$/model/Recurrent.php" />
         <option value="$PROJECT_DIR$/controller/Wishlist.php" />
         <option value="$PROJECT_DIR$/controller/Base.php" />
-        <option value="$PROJECT_DIR$/view/home/index.php" />
-        <option value="$PROJECT_DIR$/view/Wishlist/listProductsForList.php" />
         <option value="$PROJECT_DIR$/view/Wishlist/listProducts.php" />
         <option value="$PROJECT_DIR$/view/Wishlist/listItems.php" />
+        <option value="$PROJECT_DIR$/cron/notifications-list.php" />
+        <option value="$PROJECT_DIR$/controller/Home.php" />
+        <option value="$PROJECT_DIR$/view/Wishlist/listProductsForList.php" />
+        <option value="$PROJECT_DIR$/cron/notifications.php" />
+        <option value="$PROJECT_DIR$/model/Notifications.php" />
         <option value="$PROJECT_DIR$/model/Wishlist.php" />
+        <option value="$PROJECT_DIR$/view/home/index.php" />
+        <option value="$PROJECT_DIR$/view/Wishlist/productDetail.php" />
       </list>
     </option>
   </component>
@@ -506,44 +507,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/Settings/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="10" selection-start="44" selection-end="629" vertical-scroll-proportion="-17.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="190" selection-end="190" vertical-scroll-proportion="-2.6153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/Recurrent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="40" selection-start="1850" selection-end="1857" vertical-scroll-proportion="-12.254902">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/Products.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="8" selection-start="980" selection-end="1018" vertical-scroll-proportion="-13.076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/Recurrent.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="29" selection-start="655" selection-end="655" vertical-scroll-proportion="0.27304965">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/Wishlist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="27" selection-start="2301" selection-end="2301" vertical-scroll-proportion="-9.0">
           <folding />
         </state>
       </provider>
@@ -569,60 +535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/home/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="40" selection-start="460" selection-end="460" vertical-scroll-proportion="-12.423077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Wishlist/productDetail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Wishlist/listProductsForList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="146" selection-start="1876" selection-end="1876" vertical-scroll-proportion="-10.769231">
-          <folding>
-            <element signature="n#style#0;n#h2#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#h2#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#1;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Wishlist/listProducts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="17" selection-start="3915" selection-end="3915" vertical-scroll-proportion="-14.384615">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#h2#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#1;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#span#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#span#1;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#form#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/Wishlist/listItems.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="9" selection-start="1625" selection-end="1625" vertical-scroll-proportion="-31.538462">
@@ -633,10 +545,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cron/notifications-list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="25" selection-start="1581" selection-end="1581" vertical-scroll-proportion="-28.76923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/Wishlist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="35" selection-start="3146" selection-end="3155" vertical-scroll-proportion="-23.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/Recurrent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="37.26923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="57" selection-start="144" selection-end="144" vertical-scroll-proportion="-3.9230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cron/notifications.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="24" selection-start="1025" selection-end="1025" vertical-scroll-proportion="-11.269231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Notifications.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="27" selection-start="692" selection-end="692" vertical-scroll-proportion="-11.269231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/Wishlist.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="27" selection-start="3366" selection-end="3366" vertical-scroll-proportion="0.3534279">
+        <state line="99" column="23" selection-start="3084" selection-end="3084" vertical-scroll-proportion="-6.1960783">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/home/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="0" selection-start="3014" selection-end="3014" vertical-scroll-proportion="-14.538462">
+          <folding>
+            <element signature="e#2751#2769#0" expanded="true" />
+            <element signature="e#2806#2825#0" expanded="true" />
+            <element signature="e#3686#3735#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Wishlist/listProducts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="93" selection-start="2338" selection-end="2382" vertical-scroll-proportion="-11.615385">
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#h2#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#1;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Wishlist/listProductsForList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="2" selection-start="558" selection-end="946" vertical-scroll-proportion="-7.1923075">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Wishlist/productDetail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="8" selection-start="847" selection-end="847" vertical-scroll-proportion="0.72215843">
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

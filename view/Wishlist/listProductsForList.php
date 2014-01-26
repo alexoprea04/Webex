@@ -92,7 +92,7 @@
                 <br>
                 Pret <input type="text" style="width:8em" name="product_price_<?=$product['productObject']->getId()?>" id="product_price_<?=$product['productObject']->getId()?>" value="<?=$product['target_price']?>"> RON
                 <input type="hidden" name="products[]" value="<?=$product['productObject']->getId()?>">
-                <a href="javascript:void();" style="margin-left:1.3em;" onclick="removeProductContainer(<?=$product['productObject']->getId()?>)">Sterge</a>
+                <a href="javascript:void();" style="margin-left:1.3em;color:black" onclick="removeProductContainer(<?=$product['productObject']->getId()?>)">Sterge</a>
 
             </div>
 

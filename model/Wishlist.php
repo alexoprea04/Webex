@@ -94,8 +94,10 @@ class Wishlist_Model extends Base_Model {
         $query = $conn->prepare($sql);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
-
-        return self::arrayToClassObject($result[0]);
+        if (isset($result[0])) {
+            return self::arrayToClassObject($result[0]);
+        }
+        return new self;
     }
 
     public static function fetchAll() {
