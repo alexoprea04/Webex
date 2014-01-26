@@ -74,7 +74,7 @@
         ?>
     </select>
 
-    <form method="POST" action="<?=$baseDir?>Wishlist/saveProductsToList/">
+    <form method="POST" action="/Wishlist/saveProductsToList/">
         <input type="submit" value="Salveaza produse">
     <br>
     <br>
@@ -137,7 +137,7 @@
     }
 
     function reloadWithCategory(categoryId) {
-        window.location = "<?=$baseDir?>Wishlist/listProducts/?listId=<?=$data['listId']?>&categoryId=" + categoryId;
+        window.location = "/Wishlist/listProducts/?listId=<?=$data['listId']?>&categoryId=" + categoryId;
     }
 
     function expandDescription(productId) {
