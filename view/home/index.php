@@ -72,7 +72,7 @@ require_once ('view/header.php');
 				<a href="/Home/index"><img src="/images/home.jpeg" alt="home" width='49px' height='40'>
 				</a>
 			</div>
-			<div class="title"><h1>Wx Alerts</h1></div>
+			<div class="title"><h1>WeAlert</h1></div>
 			<div class="menu">
 				<a href="/Settings/index"><img src="/images/menu.png" alt="menu"></a>
 			</div>
