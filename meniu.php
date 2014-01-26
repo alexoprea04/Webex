@@ -28,7 +28,7 @@
 		<li><a href="#"><img src="images/recurent_shopping.jpg" alt="recurent" class="icons"><p>Cumparaturi recurente</p></a>
 			<img src="images/next.png" alt="next" class="next">
 		</li>
-		<li><a href="#"><img src="images/product_day.png" alt="alerta" class="icons"><p>Produsul zilei</p></a>
+		<li><a href="day.php"><img src="images/product_day.png" alt="alerta" class="icons"><p>Produsul zilei</p></a>
 			<img src="images/next.png" alt="next" class="next">
 		</li>
 		<li><a href="#">
