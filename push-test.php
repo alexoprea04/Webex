@@ -1,5 +1,5 @@
 <?php
-	$api_key = "AIzaSyBiitiGBt5uHgaRUq4CNSdSaQpzvUqo7SQ";
+	$api_key = "API_KEY";
 	$registrationIDs = array("APA91bEWOejafg3xen1xJngBJhcwwmpMw7lUBNJA9ZVErodMMBkGDQQDmqjbxFdvZqG-bcPPC-dVA67GtIaXgn22DhPavdF9kjzyXLpiLBUHsns1vOoiLfmV7kIMGb5UZF6THTNMXslzsw7TcSX55FFk2nbPgyDeZA");
 	$message = "congratulations";
 	$url = 'https://android.googleapis.com/gcm/send';
